@@ -6489,17 +6489,17 @@ function(libname, pkgname) {
     .format.max.extra.digits <- 2
     
     ## threshholds for the stars
-    .format.stars <- "*"
-    .format.cutoffs <- c(0.1, 0.05, 0.01)
+    .format.stars <- getOption("stargazer.format.stars", "*")
+    .format.cutoffs <- getOption("stargazer.format.cutoffs", c(0.1, 0.05, 0.01))
     
-    .format.std.errors.left <- "("
-    .format.std.errors.right <- ")"
+    .format.std.errors.left <- getOption("stargazer.format.std.errors.left", "(")
+    .format.std.errors.right <- getOption("stargazer.format.std.errors.right", ")")
     
-    .format.p.values.left <- "p = "
-    .format.p.values.right <- ""
+    .format.p.values.left <- getOption("stargazer.format.p.values.left", "p = ")
+    .format.p.values.right <- getOption("stargazer.format.p.values.right", "")
     
-    .format.t.stats.left <- "t = "
-    .format.t.stats.right <- ""
+    .format.t.stats.left <- getOption("stargazer.format.t.stats.left", "t = ") 
+    .format.t.stats.right <- getOption("stargazer.format.t.stats.right", "") 
     
     .format.models.text <- ""
     .format.models.left <- "\\textit{"
@@ -6508,10 +6508,10 @@ function(libname, pkgname) {
     .format.models.skip.if.one <- TRUE # skip models section if only one model in table?
     .format.object.names <- FALSE
     
-    .format.numbers.text <- ""
-    .format.numbers.left <- "("
-    .format.numbers.right <- ")"
-    .format.numbers.roman <- FALSE
+    .format.numbers.text <- getOption("stargazer.format.numbers.text", "")
+    .format.numbers.left <- getOption("stargazer.format.numbers.left", "(")
+    .format.numbers.right <- getOption("stargazer.format.numbers.right", ")")
+    .format.numbers.roman <- getOption("stargazer.format.numbers.roman", FALSE)
     
     .format.digit.separator.where <- c(3)    # how 'often' to separate digits (e.g., thousands separator = 3)
     .format.digit.separator <- ","
