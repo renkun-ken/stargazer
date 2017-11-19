@@ -6556,18 +6556,18 @@ function(libname, pkgname) {
     .format.null.deviance <- "Null Deviance"
     .format.residual.deviance <- "Residual Deviance"
     
-    .format.df.left <- "(df = "
-    .format.df.right <- ")"
-    .format.df.separator <- "; "
-    .format.intelligent.df <- TRUE
+    .format.df.left <- getOption("stargazer.format.df.left", "(df = ")
+    .format.df.right <- getOption("stargazer.format.df.right", ")")
+    .format.df.separator <- getOption("stargazer.format.df.separator", "; ")
+    .format.intelligent.df <- getOption("stargazer.format.intelligent.df", TRUE_
     
     # this is for se, tstat, p.values at the bottom of the table, by statistics
-    .format.se.left <- " ("
-    .format.se.right <- ")"
-    .format.tstat.left <- " (z = "
-    .format.tstat.right <- ")"
-    .format.p.value.left <- " (p = "
-    .format.p.value.right <- ")"
+    .format.se.left <- getOption("stargazer.format.se.left", " (")
+    .format.se.right <- getOption("stargazer.format.se.right", ")")
+    .format.tstat.left <- getOption("stargazer.format.tstat.left", " (z = ")
+    .format.tstat.right <- getOption("stargazer.format.tstat.right", ")"_
+    .format.p.value.left <- getOption("stargazer.format.p.value.left", " (p = ")
+    .format.p.value.right <- getOption("stargazer.format.p.value.right", ")")
     
     .format.intercept.name <- "Constant"
     .format.intercept.bottom <- TRUE
